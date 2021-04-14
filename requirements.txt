@@ -74,7 +74,6 @@ sqlparse==0.2.4
 systemd-python==234
 testresources==2.0.1
 tornado==6.1
-ubuntu-drivers-common==0.0.0
 ufw==0.36
 unattended-upgrades==0.1
 urllib3==1.25.8
