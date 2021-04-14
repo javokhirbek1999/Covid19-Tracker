@@ -1,0 +1,62 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | Covid-19 Tracker</title>
+    <link rel="stylesheet" href="{% static 'tracker/style.css' %}">
+</head>
+    <body>
+    <header>
+        <div class="navbar">
+            <div class="logo"><a href="/"><img src="https://raw.githubusercontent.com/javokhirbek1999/leetcode/main/logo.png"></a></div>
+            <ul class="menu">
+                <li><a href="/">Home</a></li>
+                <li><a href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019/question-and-answers-hub/q-a-detail/coronavirus-disease-covid-19#:~:text=symptoms" target="_blank">Covid-19</a></li>
+                <li><a href="{% url 'about' %}">About</a></li>
+            </ul>
+        </div>
+        <div class="text-content">
+            <h2>Total:&nbsp;&nbsp;<span style="color: #ffffff;">{{data.TotalInfected}}</span></h2>
+            <h2>Recovered:&nbsp;&nbsp;<span style="color: #a8ff1c;">{{data.TotalRecovered}}</span></h2>
+            <h2>Deaths:&nbsp;&nbsp;<span style="color: #ff4747;">{{data.TotalDeaths}}</span></h2>            
+            <br>    
+            <h2>New Cases:&nbsp;&nbsp;+<span style="color: #ffffff;">{{data.NewCases}}</span></h2>  
+            <h2>New Recovered:&nbsp;&nbsp;+<span style="color: #a8ff1c;">{{data.NewRecovered}}</span></h2>            
+            <h2>New Deaths:&nbsp;&nbsp;+<span style="color: #ff4747;">{{data.NewDeaths}}</span></h2>            
+
+            
+        </div>
+        <div class="country-stats">
+            <label for="countries">Choose a country</label>
+            <br>
+            <select class="select" name="countries" onchange="invoke(this.value)">
+                <option selected>Open this select menu</option>
+                {% if data %}
+                    {% for country in data.Country %}
+                    <option value="{% url 'detail' country%}">{{country}}</option>
+                    {% endfor %}
+                {% endif %}
+              </select>
+              <h2 style="margin-left: 10%; color: white; margin-top: 5%;
+                        @media(max-width:410;){
+                            margin-left: 30%;
+                        }">{{country.Country}}</h2>
+              <h2 style="color: white;margin-top: 2%;">Total:&nbsp;&nbsp;<span style="color: #ffffff;">{{country.Cases}}</span></h2>
+              <h2 style="color: white;margin-top: 2%;">Recovered:&nbsp;&nbsp;<span style="color: #a8ff1c;">{{country.Recovered}}</span></h2>
+              <h2 style="color: white;margin-top: 2%;">Deaths:&nbsp;&nbsp;<span style="color: #ff4747;">{{country.Deaths}}</span></h2>
+              <h2 style="color: white;margin-top: 2%;">New Cases:&nbsp;&nbsp;<span style="color: #ffffff;">{{country.NewCases}}</span></h2>
+              <h2 style="color: white;margin-top: 2%;">New Recovered:&nbsp;&nbsp;<span style="color: #a8ff1c;">{{country.NewRecovered}}</span></h2>
+              <h2 style="color: white;margin-top: 2%;">New Deaths:&nbsp;&nbsp;<span style="color: #ff4747;">{{country.NewDeaths}}</span></h2>
+        </div>
+    </header>
+    <script>
+        function invoke(url){
+            window.location = url;
+        }
+    </script>
+    <script src="https://use.fontawesome.com/79bc42db6d.js"></script>
+</body>
+</html>

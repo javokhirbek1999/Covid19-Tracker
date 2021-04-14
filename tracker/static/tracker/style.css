@@ -1,0 +1,331 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;1,400&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+
+body{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background:url('https://upload.wikimedia.org/wikipedia/commons/8/82/SARS-CoV-2_without_background.png'),linear-gradient(135deg,#ff9a9e 10%,#F6416C 100%);
+}
+body::before,
+body::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0.4;
+}
+
+body::before{
+    clip-path: circle(30% at left 20%);
+    background: linear-gradient(135deg,#F6416C 10%, #ff9a9e 100%);
+}
+
+body::after{
+    clip-path: circle(25% at right 80%);
+    background: linear-gradient(135deg,#F6416C 10%, #ff9a9e 100%);
+}
+
+header{
+    height: 85vh;
+    width: 90%;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    margin: auto;
+    border-radius: 25px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+    border-top: 1px solid rgba(255, 255, 255,0.5);
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+    position: relative;
+    z-index: 12;
+}
+
+header .navbar{
+    width: 100%;
+    display: flex;
+    padding: 35px 50px;
+    justify-content: space-between;
+}
+
+header .navbar .logo a{
+    font-size: 22px;
+    font-weight: 500;
+    color: #000;
+    text-decoration: none;
+}
+
+header .navbar .menu{
+    display: flex;
+}
+
+.navbar .menu li{
+    list-style: none;
+    margin: 0 6px;
+}
+
+.navbar .menu a{
+    text-decoration: none;
+    color: #eeeeee;
+    font-size: 17px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.navbar .menu a:hover{
+    color: #f2f2f2;
+}
+
+
+.navbar .logo img{
+    height: 150px;
+    width: 150px;
+    margin-top: -65px;
+}
+.text-content{
+    width: 40%;
+    margin: 10px 0 0 70px;
+}
+
+.text-content h2{
+    font-size: 22px;
+    font-weight: 600;
+    color: white;
+}
+
+.text-content p{
+    margin-top: 10px;
+    font-size: 15px;
+}
+
+.select{
+    padding: 8px 12px;
+    color: #333333;
+    background-color: #eeeeee;
+    border: 1px solid #dddddd;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.country-stats{
+    width: 50%;
+    margin: -280px 0 0 650px;
+}
+.country-stats h2{
+    font-size: 22px;
+    font-weight: 600;
+    color: white;
+}
+.country-stats label{
+    color: white;
+}
+.select:focus,
+.select:hover{
+    outline: none;
+    border: 1px solid #bbbbbb;
+}
+.my_image{
+    backdrop-filter: blur(55px);
+    width: 150px;
+    margin-left: 38%;
+    margin-top: -5%;
+    clip-path: circle();
+}
+.about-content{
+    width: 50%;
+    backdrop-filter: blur(30px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+    border-top: 1px solid rgba(255, 255, 255,0.5);
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 15%;
+    margin-left: 30%;
+    margin-right: 25%;
+    margin-top: -5%;
+}
+.about-content p{
+    color: whitesmoke;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 25px;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-bottom: 5%;
+    font-family:'Poppins',sans-serif;
+}
+.socials{
+    width: 100%;
+    margin-left: 45%;
+    margin-top: 5%;
+}
+.socials li{
+    list-style-type: none;
+    display: inline-block;
+    padding-left: 2%;
+}
+.socials li a{
+    color: white;
+    transition: transform 300s ease;
+    transform: translateZ(0) scale(1.02) perspective(1000px);
+}
+
+.socials li:hover{
+    transform: scale(1.5) perspective(1500px) rotateY(10deg);
+}
+@media (max-width:850px) {
+    header .navbar{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar .menu{
+        margin: 10px 0 20px 0;
+    } 
+
+    .text-content{
+        width: 70%;
+        margin: 30px 0 0 20px;
+    }
+
+    .navbar .menu li{
+        list-style: none;
+        margin: -35px 15px;
+    }
+
+    .country-stats{
+        width: 50%;
+        margin: 30px 0 0 50px;
+    }
+    .country-stats h2{
+        font-size: 15px;
+        font-weight: 600;
+        color: white;
+    }
+} 
+
+
+@media (max-width:680px){
+
+    header .navbar{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar .menu{
+        margin: 10px 0 20px 0;
+    } 
+
+    .text-content{
+        width: 70%;
+        margin: 30px 0 0 20px;
+    }
+    
+    .navbar .menu li{
+        list-style: none;
+        margin: -35px 15px;
+    }
+
+    .country-stats{
+        width: 50%;
+        margin: 30px 0 0 50px;
+    }
+    .country-stats h2{
+        font-size: 15px;
+        font-weight: 600;
+        color: white;
+    }
+   
+}
+
+@media (max-width:410px){
+    body{
+        background-position: -250%;
+    }
+    header{
+        height: 100vh;
+        width: 100%;
+        border-radius: 0;
+    }
+    .navbar .menu li{
+        list-style: none;
+        margin: -35px 15px;
+    }
+    .text-content{
+        width: 40%;
+        margin: -20px 0 0 70px;
+    }
+    .select{
+        padding: 4px 6px;
+        color: #333333;
+        background-color: #eeeeee;
+        border: 1px solid #dddddd;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+    .country-stats{
+        width: 50%;
+        margin: 30px 0 0 50px;
+    }
+    .country-stats h2{
+        font-size: 15px;
+        font-weight: 600;
+        color: white;
+    }
+    .country-stats label{
+        color: white;
+    }
+    
+    .text-content h2{
+        font-size: 15px;
+        color: whitesmoke;
+    } 
+    .navbar .menu a{
+        color: #dddddd;
+    } 
+    .about-content{
+        border: none;
+        backdrop-filter: none;
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    .about-content p{
+        color: whitesmoke;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 25px;
+        padding-left: 5%;
+        padding-right: 5%;
+        padding-bottom: 5%;
+        font-family:'Poppins',sans-serif;
+    }
+    .my_image{
+        backdrop-filter: none;
+        width: 110px;
+        margin-left: 38%;
+        margin-top: -5%;
+        clip-path: circle();
+    }
+
+    .socials{
+        width: 80%;
+        margin-left: 15%;
+        margin-top: 5%;
+    }
+    .socials li{
+        list-style-type: none;
+        display: inline-block;
+        padding-left: 10%;
+    }
+   
+}
+
+
+
