@@ -1,5 +1,4 @@
 appdirs==1.4.4
-apturl==0.5.2
 bcrypt==3.1.7
 beautifulsoup4==4.9.3
 blinker==1.4
@@ -51,6 +50,7 @@ netifaces==0.10.4
 oauthlib==3.1.0
 olefile==0.46
 paramiko==2.6.0
+pbr==5.5.1
 pexpect==4.6.0
 Pillow==7.0.0
 protobuf==3.6.1
@@ -82,6 +82,7 @@ six==1.14.0
 soupsieve==2.2.1
 sqlparse==0.2.4
 systemd-python==234
+testresources==2.0.1
 tornado==6.1
 ubuntu-advantage-tools==20.3
 ubuntu-drivers-common==0.0.0
