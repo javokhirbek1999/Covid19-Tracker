@@ -94,9 +94,9 @@ Here's a blank template to get started:
 
 ### Built With
 
-* [Django]()
-* [Javascript]()
-* [SQLite]()
+* [Django](https://www.djangoproject.com/)
+* [Javascript](https://www.javascript.com/)
+* [SQLite](https://www.sqlite.org/index.html)
 
 
 
