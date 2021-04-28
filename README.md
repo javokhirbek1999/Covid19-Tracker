@@ -94,9 +94,9 @@ Here's a blank template to get started:
 
 ### Built With
 
-* []()
-* []()
-* []()
+* [Django]()
+* [Javascript]()
+* [SQLite]()
 
 
 
@@ -117,7 +117,7 @@ This is an example of how to list things you need to use the software and how to
 
 1. Clone the repo
    ```sh
-   git clone https://github.com/github_username/repo_name.git
+   git clone https://github.com/javokhirbek1999/Covid19-Tracker.git
    ```
 2. Install NPM packages
    ```sh
@@ -167,7 +167,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 Your Name - [@twitter_handle](https://twitter.com/twitter_handle) - email
 
-Project Link: [https://github.com/github_username/repo_name](https://github.com/github_username/repo_name)
+Project Link: [https://github.com/javokhirbek1999/Covid19-Tracker](https://github.com/github_username/repo_name)
 
 
 
